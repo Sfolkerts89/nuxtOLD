@@ -59,4 +59,4 @@ export default {
   },
   env: {
     storeUrl: process.env.STORE_URL ||"http://localhost:1337" 
-  }
+  },

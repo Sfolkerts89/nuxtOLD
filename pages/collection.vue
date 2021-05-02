@@ -11,10 +11,10 @@
           :src="'http://localhost:1337' + album.image[0].url" alt="" width="300" height="300" 
         /> -->
         <div class="px-6 py-4">
-          <div class="font-bold text-xl mb-2">{{ collection.title }}</div>
+          <div class="font-bold text-xl mb-2">{{ collections.title }}</div>
           <p
             class="text-gray-700 text-base"
-          >{{ collection.content }}</p>
+          >{{ collections.content }}</p>
         </div>
       </div>
     </div>
@@ -36,13 +36,6 @@ export default {
       query: collectionsQuery
     }
   },
-  computed: {
-    filteredList() {
-      return this.collections.filter(collection => {
-        return collection.name.toLowerCase().includes(this.query.toLowerCase());
-      });
-    }
-  }
 };
 </script>
 

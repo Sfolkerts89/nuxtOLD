@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import albumsQuery from "~/apollo/queries/collection/collections";
+import collectionsQuery from "~/apollo/queries/collection/collections";
 export default {
   data() {
     return {

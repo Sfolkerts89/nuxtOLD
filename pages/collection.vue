@@ -4,17 +4,18 @@
       <h1>Welcome to my collection</h1>
     </div>
     <div class="container">
-      <div  v-for="collection in filteredList" v-bind:key="collection" class="max-w-sm rounded overflow-hidden shadow-lg p-1">
+      <div v-for="collection in collections" v-bind:key="collections" class="max-w-sm rounded overflow-hidden shadow-lg p-1">
        
         <!-- <img
           class="w-full"
           :src="'http://localhost:1337' + album.image[0].url" alt="" width="300" height="300" 
         /> -->
         <div class="px-6 py-4">
-          <div class="font-bold text-xl mb-2">{{ collections.title }}</div>
+          <div class="font-bold text-xl mb-2">{{ collection.title }}</div>
           <p
             class="text-gray-700 text-base"
-          >{{ collections.content }}</p>
+          >{{ collection.content }}</p>
+          <p>{{ collection.id }}</p>
         </div>
       </div>
     </div>
@@ -27,7 +28,6 @@ export default {
   data() {
     return {
       collections: [],
-      query: ""
     };
   },
   apollo: {

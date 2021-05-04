@@ -4,11 +4,15 @@
 		<Logo />
 		
 		<span class="menu-toggle-icon"  @click="toggleMenu">
+			<!--
 			<img src="/menu/Menu-icon.svg" />
+			-->
 			<span>Menu</span>
 		</span>
 		<nav-links v-if="isExpanded" />
+		<!--
 		<social v-if="isExpanded" />
+		-->
 	</div>
 
 </template>

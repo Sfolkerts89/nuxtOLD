@@ -1,0 +1,7 @@
+query Collections($id: ID!) {
+  collection(id: $id) {
+    id
+    title
+    content
+  }
+}

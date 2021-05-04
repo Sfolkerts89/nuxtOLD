@@ -8,25 +8,35 @@ export default {
       { hid: 'description', name: 'description', content: '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { 
+        rel: 'stylesheet', 
+        href: 'https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&family=Roboto&display=swap', 
+      },
+    ],
   },
 
-  // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: [
-  ],
-
+ // Global CSS (https://go.nuxtjs.dev/config-css)
+ css: [
+  'normalize.css/normalize.css',
+  '~/assets/scss/main.scss'
+],
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
-  components: true,
+  components: [
+    {
+      path: '~/components', // will get any components nested in let's say /components/test too
+      pathPrefix: false,
+    },
+  ],
+
 
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
-    // https://go.nuxtjs.dev/tailwindcss
-    '@nuxtjs/tailwindcss',
+   
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -39,7 +49,13 @@ export default {
     '@nuxt/content',
 
     '@nuxtjs/apollo',
+
+    '@nuxtjs/style-resources'
   ],
+
+  styleResources: {
+    scss: ['./assets/scss/*.scss']
+  },
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {},

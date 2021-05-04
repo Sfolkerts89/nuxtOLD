@@ -1,44 +1,36 @@
 <template>
-    <div class="container">
-    <div class="title">
-      <h1>Welcome to my collection</h1>
+    <div>
+
+      <collections v-bind:collections="collections" />
+
     </div>
-    <div class="container">
-      <div v-for="collection in collections" v-bind:key="collections" class="max-w-sm rounded overflow-hidden shadow-lg p-1">
-       
-        <!-- <img
-          class="w-full"
-          :src="'http://localhost:1337' + album.image[0].url" alt="" width="300" height="300" 
-        /> -->
-        <div class="px-6 py-4">
-          <div class="font-bold text-xl mb-2">{{ collection.title }}</div>
-          <p
-            class="text-gray-700 text-base"
-          >{{ collection.content }}</p>
-          <p>{{ collection.id }}</p>
-        </div>
-      </div>
-    </div>
-  </div>
 </template>
 
 <script>
-import collectionsQuery from "~/apollo/queries/collection/collections";
+
+import collectionsQuery from '~/apollo/queries/collections/collections'
+
 export default {
-  data() {
-    return {
-      collections: [],
-    };
+  data () {
+      return {
+        collections: [],
+      }
   },
   apollo: {
-    collections: {
-      prefetch: true,
-      query: collectionsQuery
-    }
-  },
-};
+      collections: {
+        query: collectionsQuery,
+        variables () {
+          return { id: parseInt(this.$route.params.id) }
+        }
+      }
+  }
+}
+
+
 </script>
 
+
 <style scoped>
+
 
 </style>

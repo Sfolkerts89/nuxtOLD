@@ -1,23 +1,43 @@
 <template>
-	<div class="mx-auto text-white bg-gray-900 p-5">
-		<nav class="flex-row md:justify-between">
-			<div class="flex flex-row justify-between">
-				<Logo />
-			</div>
-			<ul class="flex">
-				<li class="pr-5"><NuxtLink to="/">Home</NuxtLink></li>
-				<li class="pr-5"><NuxtLink to="/collection">Collection</NuxtLink></li>
-				<li class="pr-5"><NuxtLink to="/about-us">About us</NuxtLink></li>
-				<li class="pr-5"><NuxtLink to="/contact">Contact</NuxtLink></li>
-			</ul>
-		</nav>
+	<div id="nav-bar">
+	
+		<nav-desktop />
+		<!-- need to load either one with v-if/v-else .... -->
+		
+		<!-- <nav-mobile /> -->
 	</div>
 </template>
 
+<script>
 
 
-<style scoped>
-.active{
-        display: block;
-    }  
+</script>
+
+<style lang="scss">
+
+
+@media only screen and (max-width: 767px) {
+	.desktop {
+		display: none;
+	}
+	.mobile {
+		display: block;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.mobile {
+		display: block;
+	}
+	.desktop {
+		display: none;
+	}
+}
+
+
+#nav-bar {
+	z-index: 99;
+}
+
+
 </style>

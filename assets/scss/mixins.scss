@@ -1,0 +1,48 @@
+/* COLORS 
+- 
+- 
+*/
+$white: #fff;
+$light: #EBE1E3;
+
+$dark-grey: #333;
+
+$base-color: #F79727;
+
+
+/* FONTS
+- 
+- 
+*/
+
+$font: 'Montserrat', sans-serif;
+$font-one: 'Open Sans', sans-serif;
+$font-two: 'Roboto', sans-serif;
+
+
+
+/* MEDIA QUERY breakpoints
+- 
+- 
+*/
+
+@mixin xsm {
+    @media (max-width: 767px) { @content; }
+}
+
+@mixin sm {
+    @media (min-width: 768px) { @content; }
+}
+
+@mixin md {
+    @media (min-width: 1024px) { @content; }
+}
+
+@mixin lg {
+    @media (min-width: 1440px) { @content; }
+}
+
+@mixin xlg {
+    @media (min-width: 1920px) { @content; }
+}
+

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="!$apollo.loading">
 
       <div v-if="collection" v-bind="collection" class="collection-container">
 
@@ -7,6 +7,8 @@
  
         <div class="content">
           {{ collection.content }}
+          {{ collection.image }}
+          {{ collection.content_two }}
         </div>
       </div>
 

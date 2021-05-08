@@ -63,9 +63,11 @@ export default {
   // Content module configuration (https://go.nuxtjs.dev/config-content)
   content: {},
 
+  /*
   env: {
     strapiBaseUri: process.env.BACKEND_URL || "http://localhost:1337"
   },
+*/
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {

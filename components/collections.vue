@@ -39,6 +39,7 @@
     </div> <!-- / container -->
 
   </div><!-- collection-container -->
+  <div v-else>Loading</div>
 </template>
 
 <script>

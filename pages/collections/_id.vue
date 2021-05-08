@@ -7,7 +7,9 @@
  
         <div class="content">
           {{ collection.content }}
-          {{ collection.image }}
+          <div>
+            <img :src="'http://localhost:1337' + collection.content_image.url" width="300" height="300" />
+          </div>
           {{ collection.content_two }}
         </div>
       </div>

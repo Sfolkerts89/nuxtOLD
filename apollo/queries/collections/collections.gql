@@ -3,5 +3,9 @@ query Collections {
     id
     title
     content
+    content_two
+    content_image {
+      url
+    }
   }
 }

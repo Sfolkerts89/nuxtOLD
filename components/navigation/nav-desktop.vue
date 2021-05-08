@@ -104,13 +104,13 @@ export default {
 			font-size: 1em;
 			color: $white;
 			list-style: none;
+			.nuxt-link-active {
+				color: $base-color;
+			}
 			&:hover {
 				border-right: 0.5em solid $base-color;
 				padding-right: 0.5em;
 				transition: 300ms ease-in-out;
-			}
-			.nuxt-link-active {
-				color: $base-color;
 			}
 		}
 	}

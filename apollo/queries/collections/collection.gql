@@ -3,9 +3,7 @@ query Collections($id: ID!) {
     id
     title
     content
-    image {
-      url
-    }
     content_two
+    content_image { url }
   }
 }

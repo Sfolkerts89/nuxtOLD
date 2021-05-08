@@ -21,6 +21,11 @@
       
           <div>
             <div><h2>{{ collection.title }}</h2></div>
+
+            {{ collection.content_two}}
+            <div>
+              <img :src="api_url + collection.content_image.url" width="300" height="300" />
+            </div>
            
             <p>{{ collection.content }}</p>
          

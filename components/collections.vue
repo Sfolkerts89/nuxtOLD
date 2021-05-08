@@ -2,7 +2,7 @@
   <div v-if="!$apollo.loading" class="collections-container">
 
     <div class="title">
-      <h1>collections</h1>
+      <h1>collections hallo bianca</h1>
     </div>
 
     <div>

@@ -6,8 +6,8 @@
     </div>
 
     <div>
-
-       <div v-if="!$apollo.loading" v-for="collection in collections" class="collection-container">
+    
+       <div  v-if="!$apollo.loading" v-for="collection in collections" class="collection-container">
        <router-link v-bind="collection" 
           :to="{ name: 'collections-id', params: {id: collection.id} }" 
           class="" :key="collection.id">
@@ -18,7 +18,7 @@
             {{ collection.content_two}}
 
             <div>
-              {{ collection.content_image.url }}
+              <img :src="collection.content_image.url" width="300" height="300" />
             </div>
 
             <p>{{ collection.content }}</p>
@@ -27,11 +27,8 @@
 
         </router-link>
         </div> <!-- /collection-container -->
-
         <div v-else>Loading</div>
-
         
-
     </div> <!-- / container -->
 
   </div><!-- collections-container -->

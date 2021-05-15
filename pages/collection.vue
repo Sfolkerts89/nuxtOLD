@@ -18,7 +18,7 @@ export default {
   },
   apollo: {
       collections: {
-        prefetch: true,
+        prefetch:  true,
         query: collectionsQuery,
         variables () {
           return { id: parseInt(this.$route.params.id) }

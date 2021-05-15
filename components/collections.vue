@@ -42,7 +42,7 @@ import collectionsQuery from '~/apollo/queries/collections/collections'
 export default {
   data() {
     return {
-      api_url: process.env.strapiBaseUri
+     collection: [],
     }
   },
   apollo: {
@@ -53,11 +53,6 @@ export default {
   },
   props: {
     collections: Array
-  },
-  head() {
-    return {
-      title: 'collections'
-    }
   }
 }
 </script>

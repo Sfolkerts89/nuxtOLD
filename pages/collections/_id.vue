@@ -1,5 +1,9 @@
 <template>
-  <div v-if="$apollo.loading">Im still loading..</div>
+  <div v-if="$apollo.loading">
+    <div class="apollo-loading">
+      <h2>Im still loading..</h2>
+    </div>
+  </div>
   <div v-else>
     <div v-if="collection" v-bind="collection" class="collection-container">
       <h1>{{ collection.title }}</h1>
@@ -9,6 +13,8 @@
           <img :src="collection.content_image.url" width="300" height="300" />
         </div>
         {{ collection.content_two }}
+        <br />
+        {{ collection.SEOmetaData.metaDescription }}
       </div>
     </div>
   </div>
@@ -34,20 +40,14 @@ export default {
   },
   head() {
     return {
-      title: this.collection.title,
+      title: this.title,
       meta: [
-        {
-          hid: 'title',
-          name: 'title',
-          content: this.collection.SEOmetaData.metaTitle
-        },
         {
           hid: 'description',
           name: 'description',
           content: this.collection.SEOmetaData.metaDescription
         }
       ]
-      
     }
   }
 }

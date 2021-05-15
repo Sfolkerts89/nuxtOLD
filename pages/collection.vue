@@ -23,6 +23,14 @@ export default {
           return { id: parseInt(this.$route.params.id) }
         }
       }
+  },
+  head: {
+    title: 'moi eem',
+    meta: [
+      {
+        hid: 'description', name: 'description', content: 'yooooo'
+      }
+    ]
   }
 }
 

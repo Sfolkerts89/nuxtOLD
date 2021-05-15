@@ -2,7 +2,7 @@
   <div class="collections-container">
 
     <div class="title">
-      <h1>collections hallo bianca</h1>
+      <h1>collections hallo</h1>
     </div>
 
     <div>
@@ -53,6 +53,11 @@ export default {
   },
   props: {
     collections: Array
+  },
+  head() {
+    return {
+      title: 'collections'
+    }
   }
 }
 </script>

@@ -1,21 +1,16 @@
 <template>
-  <div v-if="!$apollo.loading">
-
-      <div v-if="collection" v-bind="collection" class="collection-container">
-
-        <h1>{{ collection.title }}</h1>
- 
-        <div class="content">
-          {{ collection.content }}
-          <div>
-            <img :src="collection.content_image.url" width="300" height="300" />
-          </div>
-          {{ collection.content_two }}
+  <div v-if="$apollo.loading">Im still loading..</div>
+  <div v-else>
+    <div v-if="collection" v-bind="collection" class="collection-container">
+      <h1>{{ collection.title }}</h1>
+      <div class="content">
+        {{ collection.content }}
+        <div>
+          <img :src="collection.content_image.url" width="300" height="300" />
         </div>
+        {{ collection.content_two }}
       </div>
-
-      <p v-else>Loading..</p>
-
+    </div>
   </div>
 </template>
 
@@ -35,6 +30,24 @@ export default {
       variables () {
         return { id: parseInt(this.$route.params.id) }
       }
+    },
+  },
+  head() {
+    return {
+      title: this.collection.title,
+      meta: [
+        {
+          hid: 'title',
+          name: 'title',
+          content: this.collection.SEOmetaData.metaTitle
+        },
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.collection.SEOmetaData.metaDescription
+        }
+      ]
+      
     }
   }
 }

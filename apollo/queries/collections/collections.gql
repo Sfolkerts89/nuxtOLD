@@ -7,5 +7,12 @@ query Collections {
     content_image {
       url
     }
+    SEOmetaData {
+      metaTitle
+      metaDescription
+      shareImage {
+        media { url }
+      }
+    }
   }
 }

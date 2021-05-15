@@ -24,7 +24,8 @@
 import collectionQuery from '~/apollo/queries/collections/collection'
 
 export default {
-  data() {
+
+   data() {
     return {
       collection: [],
     }

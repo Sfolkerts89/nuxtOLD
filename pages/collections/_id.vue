@@ -40,13 +40,22 @@ export default {
   },
   head() {
     return {
-      title: this.title,
+      title: this.collection.title,
       meta: [
         {
           hid: 'description',
           name: 'description',
+          content: this.collection.content
+        },
+        {
+          hid: 'shareImage',
+          name: 'shareImage',
           content: this.collection.SEOmetaData.metaDescription
         }
+        /*
+        - using: this.collection.content works on first page load (yep, works fine even with heroku as endpoint)
+        - Maybe its because SEOmetaData is a component? Even though its injected into the query? 
+        */
       ]
     }
   }

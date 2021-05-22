@@ -1,0 +1,14 @@
+query contact {
+  contact {
+    title
+    SEOmetaData {
+      metaTitle
+      metaDescription
+      shareImage {
+        media {
+          url
+        }
+      }
+    }
+  }
+}

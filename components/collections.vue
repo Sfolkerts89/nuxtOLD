@@ -5,7 +5,7 @@
       <h1>collections hallo</h1>
     </div>
 
-    <div>
+    <div class="container">
     
        <div  v-if="!$apollo.loading" v-for="collection in collections" class="collection-container">
        <router-link v-bind="collection" 

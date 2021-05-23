@@ -127,8 +127,37 @@ export default {
         return {
             title: this.SEOvar.metaTitle,            
             meta: [
+                // Default
                 { hid: 'description', name: 'description', content: this.SEOvar.metaDescription },
                 { vmid: 'robots', name: 'robots', content: (this.SEOvar.preventIndexing ? 'noindex, nofollow' : 'index, follow') }, // change API boolean into string usiung method?
+
+
+                // Socials
+                // OpenGraph data (Most widely used)
+                {property: 'og:title', content: },
+                {property: 'og:site_name', content: },
+                // The list of types is available here: http://ogp.me/#types
+                {property: 'og:type', content: },
+                // Should the the same as your canonical link, see below.
+                {property: 'og:url', content: },
+                {property: 'og:image', content: },
+                // Often the same as your meta description, but not always.
+                {property: 'og:description', content: }
+
+                // // Twitter card
+                {name: 'twitter:card', content: },
+                {name: 'twitter:site', content: },
+                {name: 'twitter:title', content: },
+                {name: 'twitter:description', content: },
+                // Your twitter handle, if you have one.
+
+                // If creator exists: {name: 'twitter:creator', content: '@alligatorio'}
+                {name: 'twitter:image:src', content: },
+
+                // // Google / Schema.org markup:
+                {itemprop: 'name', content: },
+                {itemprop: 'description', content: ,
+                {itemprop: 'image', content: }
                 
             ]
         

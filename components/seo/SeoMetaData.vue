@@ -20,21 +20,23 @@ export default {
 
     },
 
-    data() {
+    data() {  // this works for pages with SEOmetaData defined, but not if SEOdata array is NULL
         return {
             SEOvar: this.SEOdata.SEOmetaData,
         }
     },
 
-    // data: function() {
-    //     if (!this.SEOdata) {
+    // data() // Work in progress
+    //     if (this.SEOdata === undefined || this.SEOdata.length == 0) {
+    //         // do nothing
+    //     } else {
     //         return ({
-    //             SEOvar: this.SEOdata.SEOmetaData
+    //             SEOvar: this.SEOdata.SEOmetaData,
     //         })
     //     }
     // },
   
-    head: function() {
+    head() { // this works as is
 
         if (this.SEOdata === undefined || this.SEOdata.length == 0) {
             return ({

@@ -1,12 +1,12 @@
 <template>
   <div class="container">
   
-    {{ contact.title }}
+    {{ title }}
     
-    {{ contact.content }} 
 
-    <!-- <SeoMetaData :someData="SEOquery" />  ( WORKS )-->
-    <SeoMetaData v-bind="(contact)" :SEOdata="contact" />
+
+ 
+    <!-- <SeoMetaData v-bind="(contact)" :SEOdata="contact" />  -->
   </div>
 </template>
 

@@ -7,9 +7,7 @@
 <script>
 
 // todo list:
-// - fix robots boolean #DONE
 // - create if statement : if query array SEOmetaData exist, else dont render component
-
 // - create seperate SEO component for portfolio && items, specify per item. Especially <itemprop> (read: microdata; schema.org )
 
 export default {
@@ -17,45 +15,31 @@ export default {
  
     props: {
         SEOdata: [Array, Object],
-
     },
 
-    data() {  // this works for pages with SEOmetaData defined, but not if SEOdata array is NULL
-        return {
-            SEOvar: this.SEOdata.SEOmetaData,
-        }
-    },
-
-    // data() // Work in progress
-    //     if (this.SEOdata === undefined || this.SEOdata.length == 0) {
-    //         // do nothing
-    //     } else {
-    //         return ({
-    //             SEOvar: this.SEOdata.SEOmetaData,
-    //         })
-    //     }
-    // },
-  
+    
     head() { // this works as is
 
-        if (this.SEOdata === undefined || this.SEOdata.length == 0) {
+        if (!this.SEOdata.SEOmetaData) {
             return ({
-                // Do nothing, serve default nuxt.config data
+                title: 'false'
             })
         } else {
+            let SEOvar = this.SEOdata.SEOmetaData
             return ({
-                title: this.SEOvar.metaTitle,
+                title: SEOvar.metaTitle,
 
                 meta: [
-                    { hid: 'description', name: 'description', content: this.SEOvar.metaDescription  },
-                    { vmid: 'robots', name: 'robots', content: (this.SEOvar.preventIndexing ? 'noindex, nofollow' : 'index, follow') }, 
-                    { property: 'og:title', content: this.SEOvar.metaTitle },
-                    { property: 'og:image', content: this.SEOvar.shareImage.media.url },
-                    { property: 'og:description', content: this.SEOvar.metaDescription } 
+                    { hid: 'description', name: 'description', content: SEOvar.metaDescription  },
+                    { vmid: 'robots', name: 'robots', content: (SEOvar.preventIndexing ? 'noindex, nofollow' : 'index, follow') }, 
+                    { hid: 'og:title', property: 'og:title', content: SEOvar.metaTitle },
+                    { hid: 'og:image', property: 'og:image', content: SEOvar.shareImage.media.url },
+                    { hid: 'og:description', property: 'og:description', content: SEOvar.metaDescription } 
                 ]
             })
         }
-    }
+    } // head
+
 }
 </script>
 

@@ -5,9 +5,10 @@
       <h1>collections hallo</h1>
     </div>
 
-    <div class="container">
-    
-       <div  v-if="!$apollo.loading" v-for="collection in collections" class="collection-container">
+    <div class="container" v-bind="collections">
+        <!-- <div  v-if="!$apollo.loading" v-for="collection in collections" class="collection-container"> -->
+       <!-- <div v-for="collection in collections" v-bind="(collection)" class="collection-container"> -->
+      <div v-for="collection in collections" :key="collection" class="collection-container">
        <router-link v-bind="collection" 
           :to="{ name: 'collections-id', params: {id: collection.id} }" 
           class="" :key="collection.id">
@@ -27,7 +28,7 @@
 
         </router-link>
         </div> <!-- /collection-container -->
-        <div v-else>Loading</div>
+        <!-- <div v-else>Loading</div> -->
         
     </div> <!-- / container -->
 

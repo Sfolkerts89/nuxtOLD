@@ -3,6 +3,10 @@
 
       <collections v-bind:collections="collections" />
 
+      <!-- <div v-for="collection in collections" :key="collection">
+        {{ collection.title }}
+      </div> -->
+
     </div>
 </template>
 

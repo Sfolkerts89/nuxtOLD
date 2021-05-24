@@ -1,11 +1,15 @@
 <template>
   <div class="site-wrapper">
+
     <NavBar />
+
     <div class="content page">
       <Nuxt /> 
     </div>
+
     <Footer />
-  </div>
+    
+  </div> <!-- site-wrapper -->
 </template>
 
 <script>

@@ -1,0 +1,19 @@
+query Home {
+  home {
+    title
+    content
+    image {
+      url
+    }
+    SEOmetaData {
+      metaTitle
+      metaDescription
+      preventIndexing
+      shareImage {
+        media {
+          url
+        }
+      }
+    }
+  }
+}

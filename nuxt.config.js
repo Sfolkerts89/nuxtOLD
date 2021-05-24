@@ -76,11 +76,7 @@ export default {
   apollo: {  
     clientConfigs: {
       default: {
-<<<<<<< HEAD
         httpEndpoint: process.env.BACKEND_URL || 
-=======
-        httpEndpoint: process.env.BACKEND_URL ||
->>>>>>> dev
         // "http://localhost:1337/graphql"
         "https://sailsnake-strapi-test-two.herokuapp.com/graphql"
       }

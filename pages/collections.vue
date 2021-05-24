@@ -1,12 +1,6 @@
 <template>
     <div>
-
       <collections v-bind:collections="collections" />
-
-      <!-- <div v-for="collection in collections" :key="collection">
-        {{ collection.title }}
-      </div> -->
-
     </div>
 </template>
 
@@ -29,14 +23,14 @@ export default {
         }
       }
   },
-  head: {
-    title: 'moi eem',
-    meta: [
-      {
-        hid: 'description', name: 'description', content: 'yooooo'
-      }
-    ]
-  }
+  // head: {
+  //   title: 'moi eem',
+  //   meta: [
+  //     {
+  //       hid: 'description', name: 'description', content: 'yooooo'
+  //     }
+  //   ]
+  // }
 }
 
 

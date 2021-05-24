@@ -6,7 +6,7 @@
     </div>
 
     <div v-if="!$apollo.loading" class="container">
-       <div v-for="collection in collections" :key="collection" class="collection-container">
+       <div v-for="collection in collections" class="collection-container">
        <router-link v-bind="collection" 
           :to="{ name: 'collection-id', params: {id: collection.id} }" 
           class="" :key="collection.id">

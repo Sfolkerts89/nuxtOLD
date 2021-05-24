@@ -10,7 +10,8 @@
       <div class="content">
         {{ collection.content }}
         <div>
-          <img :src="collection.content_image.url" width="300" height="300" />         </div>
+          <img :src="collection.content_image.url" width="300" height="300" />
+        </div>
       </div>
     </div>
   </div>

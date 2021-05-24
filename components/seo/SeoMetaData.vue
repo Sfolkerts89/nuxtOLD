@@ -7,7 +7,6 @@
 <script>
 
 // todo list:
-// - create if statement : if query array SEOmetaData exist, else dont render component
 // - create seperate SEO component for portfolio && items, specify per item. Especially <itemprop> (read: microdata; schema.org )
 
 export default {
@@ -22,7 +21,7 @@ export default {
 
         if (!this.SEOdata.SEOmetaData) {
             return ({
-                title: 'false'
+                // Do nothing
             })
         } else {
             let SEOvar = this.SEOdata.SEOmetaData

@@ -5,23 +5,23 @@
       <h1>collections hallo</h1>
     </div>
 
-    <div class="container" v-if="!$apollo.loading">
-      <div v-for="collection in collections" class="collection-container">
+    <div v-if="!$apollo.loading" class="container">
+       <div v-for="collection in collections" :key="collection" class="collection-container">
        <router-link v-bind="collection" 
           :to="{ name: 'collection-id', params: {id: collection.id} }" 
           class="" :key="collection.id">
           <div>
             <div><h2>{{ collection.title }}</h2></div>
-              {{ collection.content_two}}
+            {{ collection.content_two}}
             <div>
               <img :src="collection.content_image.url" width="300" height="300" />
             </div>
             <p>{{ collection.content }}</p>
           </div> 
         </router-link>
-      </div> <!-- /collection-container -->  
+        </div> <!-- /collection-container -->
     </div> <!-- / container -->
-     <div v-else>Loading</div>
+    <div v-else>Loading</div>
   </div><!-- collections-container -->
 
 </template>

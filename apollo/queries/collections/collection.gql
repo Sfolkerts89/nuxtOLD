@@ -5,12 +5,5 @@ query Collections($id: ID!) {
     content
     content_two
     content_image { url }
-    # SEOmetaData {
-    #   metaTitle
-    #   metaDescription
-    #   shareImage {
-    #     media { url }
-    #   }
-    # }
   }
 }

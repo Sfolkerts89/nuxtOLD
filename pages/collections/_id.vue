@@ -8,7 +8,6 @@
     </div>
 
     <div v-else>
-      ??
       <div v-if="collection" v-bind="collection" class="collection-container">
         <h1>{{ collection.title }}</h1>
         <div class="content">
@@ -20,8 +19,8 @@
         </div>
       </div>
     </div>
- 
-  <SeoMetaData v-bind="(collection)" :SEOdata="collection" />
+<!--  
+  <SeoMetaData v-bind="(collection)" :SEOdata="collection" /> -->
 
  </div>
 </template>

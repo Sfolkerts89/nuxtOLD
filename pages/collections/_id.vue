@@ -42,9 +42,6 @@ export default {
         return { id: parseInt(this.$route.params.id) }
       }
     },
-    props: {
-      collection: Array
-    }
   }
 }
 </script>

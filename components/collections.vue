@@ -47,11 +47,6 @@ export default {
   },
   props: {
     collections: Array
-  },
-  head() {
-    return {
-      title: 'collections'
-    }
   }
 }
 </script>

@@ -2,6 +2,7 @@
     <div>
       <collections v-bind:collections="collections" />
       <!-- <collections v-bind:collections="collections" /> -->
+
     </div>
 </template>
 

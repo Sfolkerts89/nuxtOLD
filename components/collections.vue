@@ -36,7 +36,14 @@
 
 <script>
 
+import collectionsQuery from '~/apollo/queries/collections/collections'
+
 export default {
+    data () {
+      return {
+        collections: [],
+      }
+  },
   apollo: {
     collections: {
       prefetch: true,

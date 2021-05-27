@@ -64,7 +64,7 @@ h1 {
   padding-bottom: 40px;
 }
 
-.page-container {
+.collection-container {
   margin: 50px 0;
   background-color: $base-color;
   padding: 1em;

@@ -1,17 +1,10 @@
 <template>
   <div class="container">
-    <div v-if="!$apollo.loading">
-      ??
-    </div>
-    <div v-else>
-      else
-    </div>
-    
+  
     {{ home.title }}
     
     {{ home.content }} 
 
-    <!-- <SeoMetaData :someData="SEOquery" />  ( WORKS )-->
     <SeoMetaData v-bind="(home)" :SEOdata="home" />
   </div>
 </template>

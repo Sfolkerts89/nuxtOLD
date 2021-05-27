@@ -1,28 +1,23 @@
 <template>
-  <div>
-
-    <div v-if="$apollo.loading">
-      <div class="apollo-loading">
-        <h2>Im still loading..</h2>
-      </div>
+  <div v-if="$apollo.loading">
+    <div class="apollo-loading">
+      <h2>Im still loading..</h2>
     </div>
-
-    <div v-else>
-      <div v-if="collection" v-bind="collection" class="collection-container">
-        <h1>{{ collection.title }}</h1>
-        <div class="content">
-          <p>{{ collection.content }}</p>
-          <p>{{ collection.content_two }}</p>
-          <div>
-            <img :src="collection.content_image.url" width="300" height="300" />
-          </div>
+  </div>
+  <div v-else>
+    <div v-if="collection" v-bind="collection" class="collection-container">
+      <h1>{{ collection.title }}</h1>
+      <div class="content">
+        {{ collection.content }}
+        <div>
+          <img :src="collection.content_image.url" width="300" height="300" />
         </div>
       </div>
     </div>
-<!--  
-  <SeoMetaData v-bind="(collection)" :SEOdata="collection" /> -->
 
- </div>
+     <SeoMetaData v-bind="(collection)" :SEOdata="collection" />
+
+  </div>
 </template>
 
 <script>

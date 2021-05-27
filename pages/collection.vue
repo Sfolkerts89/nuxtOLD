@@ -27,9 +27,11 @@ export default {
   head: {
     title: 'moi eem',
     meta: [
-      {
-        hid: 'description', name: 'description', content: 'yooooo'
-      }
+       { hid: 'description', name: 'description', content: SEOvar.metaDescription  },
+                    { vmid: 'robots', name: 'robots', content: "index, follow" }, 
+                    { hid: 'og:title', property: 'og:title', content: "text" },
+                    { hid: 'og:image', property: 'og:image', content: "text" },
+                    { hid: 'og:description', property: 'og:description', content: "text" } 
     ]
   }
 }

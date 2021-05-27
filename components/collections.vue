@@ -34,11 +34,7 @@
 import collectionsQuery from '~/apollo/queries/collections/collections'
 
 export default {
-  data() {
-    return {
-    
-    }
-  },
+
   apollo: {
     collections: {
       prefetch: true,

@@ -5,7 +5,14 @@
       <h1>collections hallo</h1>
     </div>
 
-    <div v-if="!$apollo.loading" class="container">
+    <div v-if="$apollo.loading">
+      <div class="apollo-loading">
+        <h2>Im still loading..</h2>
+      </div>
+    </div>
+
+    <div v-else>
+    <div class="container">
        <div v-for="collection in collections" :key="collection" class="collection-container">
        <router-link v-bind="collection" 
           :to="{ name: 'collections-id', params: {id: collection.id} }" 
@@ -20,9 +27,8 @@
           </div> 
         </router-link>
         </div> <!-- /collection-container -->
-
     </div> <!-- / container -->
-    <div v-else>Loading</div>
+    </div> <!-- END v-else -->
 
   </div><!-- collections-container -->
 
@@ -33,11 +39,6 @@
 import collectionsQuery from '~/apollo/queries/collections/collections'
 
 export default {
-  data() {
-    return {
-      api_url: process.env.strapiBaseUri
-    }
-  },
   apollo: {
     collections: {
       prefetch: true,
@@ -49,7 +50,14 @@ export default {
   },
   head() {
     return {
-      title: 'collections'
+      title: 'collections',
+      meta: [
+          { hid: 'description', name: 'description', content: "text"  },
+          { vmid: 'robots', name: 'robots', content: "index, follow" }, 
+          { hid: 'og:title', property: 'og:title', content: "text" },
+          { hid: 'og:image', property: 'og:image', content: "text" },
+          { hid: 'og:description', property: 'og:description', content: "text" } 
+      ]
     }
   }
 }

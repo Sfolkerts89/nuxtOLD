@@ -5,7 +5,6 @@
     
     {{ home.content }} 
 
-    <!-- <SeoMetaData :someData="SEOquery" />  ( WORKS )-->
     <SeoMetaData v-bind="(home)" :SEOdata="home" />
   </div>
 </template>

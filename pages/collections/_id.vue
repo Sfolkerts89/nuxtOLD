@@ -14,6 +14,9 @@
         </div>
       </div>
     </div>
+
+     <SeoMetaData v-bind="(collection)" :SEOdata="collection" />
+
   </div>
 </template>
 

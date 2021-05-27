@@ -30,16 +30,7 @@
 
 <script>
 
-import collectionsQuery from '~/apollo/queries/collections/collections'
-
 export default {
-
-  apollo: {
-    collections: {
-      prefetch: true,
-      query: collectionsQuery
-    }
-  },
   props: {
     collections: Array
   }
